@@ -1,6 +1,6 @@
 import baseStyled, { ThemedStyledInterface } from 'styled-components'
 
-export const heroTheme = {
+export const flixTheme = {
   colors: {
     red: '#f01924',
     blue: '#68cdf2',
@@ -13,5 +13,5 @@ export const heroTheme = {
   }
 }
 
-export type Theme = typeof heroTheme
+export type Theme = typeof flixTheme
 export const styled = baseStyled as ThemedStyledInterface<Theme>

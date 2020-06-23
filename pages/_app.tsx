@@ -2,8 +2,7 @@ import React from 'react'
 import App from 'next/app'
 import { Helmet } from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
-import { HeroProvider } from 'contexts/heroContext'
-import { heroTheme } from 'styled/themes/hero-theme'
+import { flixTheme } from 'styled/themes/flix-theme'
 import { GlobalStyles } from 'styled/global.styled'
 
 class MyApp extends App {
@@ -12,22 +11,13 @@ class MyApp extends App {
     return (
       <>
         <Helmet>
-          <title>NextHeroes</title>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
-            rel="stylesheet"
-          />
+          <title>NextFlix</title>
         </Helmet>
-        <HeroProvider>
-          <ThemeProvider theme={heroTheme}>
-            <GlobalStyles />
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </HeroProvider>
+        <ThemeProvider theme={flixTheme}>
+          <GlobalStyles />
+          <header>NextFlix!</header>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </>
     )
   }
